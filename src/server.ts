@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import express from "express";
-import routes from "./routes/index";
+import routes from "./routes/index.routes";
 
 const app = express();
 
