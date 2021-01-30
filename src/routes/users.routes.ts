@@ -12,6 +12,8 @@ appointmentsRouter.post('/', async (request, response) => {
 
     const user = await createUser.execute({ name, email, password });
 
+    delete user.password;
+
     return response.json(user);
   } catch (e) {
     return response.status(400).json({ error: e.message });
